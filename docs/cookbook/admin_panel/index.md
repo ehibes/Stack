@@ -215,7 +215,7 @@ namespace App\Menu;
 
 use Knp\Menu\FactoryInterface;
 use Knp\Menu\ItemInterface;
-use Sylius\AdminUi\Knp\Menu\MenuBuilderInterface
+use Sylius\AdminUi\Knp\Menu\MenuBuilderInterface;
 use Symfony\Component\DependencyInjection\Attribute\AsDecorator;
 
 #[AsDecorator(decorates: 'sylius_admin_ui.knp.menu_builder')]
@@ -237,5 +237,7 @@ final readonly class MenuBuilder implements MenuBuilderInterface
             ->setLabel('sylius.ui.dashboard')
             ->setLabelAttribute('icon', 'dashboard')
         ;
+
+        return $menu;
     }
 }
